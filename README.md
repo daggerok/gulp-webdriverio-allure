@@ -17,12 +17,12 @@ nvm use 5
 
 npm i
 npm t
-npm run killall || true
+npm stop
 npm start &
 
-sleep 5
+sleep 10
 curl localhost:3000/index.html
-npm run killall
+npm stop
 ```
 
 **Note 2**
