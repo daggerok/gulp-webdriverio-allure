@@ -1,5 +1,6 @@
 language: node_js
-node_js: 5
+node_js:
+  - 5
 
 install: true
 before_install:
@@ -11,15 +12,17 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 script:
+  - rm -rf node_modules package-lock.json
   - export root=$(pwd)
   - npm i
   - cd $root/node_modules/phantomjs-prebuilt/
   - npm i
   - cd $root
 
-  - npm run gulp test
-  - npm run report &
+  - npm t
+  - npm stop
+  - npm start &
 
   - sleep 10
-  - curl localhost:3000/
-  - npm run killall
+  - curl localhost:3000/index.html
+  - npm stop

@@ -15,12 +15,14 @@ supported browsers:
 nvm install 5
 nvm use 5
 
-npm test
-npm run report &
+npm i
+npm t
+npm stop
+npm start &
 
 sleep 10
 curl localhost:3000/index.html
-npm run killall
+npm stop
 ```
 
 **Note 2**
