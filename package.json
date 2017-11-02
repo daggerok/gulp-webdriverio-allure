@@ -17,14 +17,13 @@
     ]
   },
   "scripts": {
-    "pregulp": "npm install",
-    "gulp": "gulp",
-    "start": "npm run gulp e2e",
+    "build": "npm test",
+    "start": "npm run report",
     "prepublish": "selenium-standalone install",
     "pretest": "npm-run-all pretest:*",
-    "pretest:rm": "rm -rf ./*-testsute.xml",
+    "pretest:rm": "rimraf -rf ./allure-results",
     "pretest:update": "selenium-standalone start &",
-    "pretest:sleep": "sleep 5",
+    "pretest:sleep": "sleep 10",
     "test": "wdio wdio.conf.js",
     "prereport": "npm-run-all prereport:*",
     "prereport:killall": "npm run killall || true",
@@ -33,8 +32,7 @@
     "killnode": "killall node || true",
     "kill9000": "kill -9 $(fuser 9000/tcp) || true",
     "killall": "npm run killjava && npm run killnode",
-    "gulp:test": "npm run gulp test",
-    "gulp:e2e": "npm run gulp e2e"
+    "stop": "npm run killall"
   },
   "repository": {
     "type": "git",
