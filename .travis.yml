@@ -13,6 +13,7 @@ before_install:
 
 script:
   - export root=$(pwd)
+  - rm -rf node_modules package-lock.json
   - npm i
   - cd $root/node_modules/phantomjs-prebuilt/
   - npm i
@@ -24,7 +25,3 @@ script:
   - sleep 10
   - curl localhost:3000/index.html
   - npm stop
-
-cache:
-  directories:
-    - node_modules
