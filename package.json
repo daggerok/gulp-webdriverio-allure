@@ -29,7 +29,7 @@
     "prereport": "npm-run-all prereport:*",
     "prereport:allure": "allure report generate -o ./allure-results ./allure-results",
     "prereport:killall": "npm run killall || true",
-    "report": "allure report open -o ./allure-results",
+    "report": "allure report open -p 3000 -o ./allure-results",
     "killjava": "killall java || true",
     "killnode": "killall node || true",
     "kill9000": "kill -9 $(fuser 9000/tcp) || true",
