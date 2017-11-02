@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - 5
+  - 6
 
 install: true
 before_install:
@@ -21,20 +22,8 @@ script:
 
   - npm t
   - npm stop
-  - npm start &
-
-  - sleep 5
-  - curl localhost:3000/index.html
-  - npm stop
-
-  - rm -rf node_modules package-lock.json yarn.lock
-  - nvm install 8
-  - nvm use 8
-  - npm i -g yarn
-  - yarn -i
-  - yarn test
-  - yarn stop
-  - yarn start &
-  - sleep 5
-  - curl localhost:3000/index.html
-  - yarn stop
+#  - npm start &
+#
+#  - sleep 10
+#  - curl localhost:3000/index.html
+#  - npm stop
