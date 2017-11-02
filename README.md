@@ -15,8 +15,7 @@ supported browsers:
 
 
 ```shell
-npm test
-npm e2e:report
+npm run gulp:test
 ```
 
 **Note 2**
