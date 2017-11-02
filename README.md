@@ -15,7 +15,7 @@ supported browsers:
 
 
 ```shell
-npm run gulp:test
+npm run gulp test
 ```
 
 **Note 2**
