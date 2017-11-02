@@ -17,13 +17,9 @@ script:
   - npm i
   - cd $root
 
-  - npm test
+  - npm run gulp test
   - npm run report &
 
   - sleep 10
-  - curl localhost:3000/index.html
+  - curl localhost:3000/
   - npm run killall
-
-cache:
-  directories:
-    - node_modules
