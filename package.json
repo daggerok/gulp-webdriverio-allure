@@ -21,7 +21,7 @@
     "start": "npm run report",
     "prepublish": "selenium-standalone install",
     "pretest": "npm-run-all pretest:*",
-    "pretest:rm": "rimraf -rf ./allure-results",
+    "pretest:rm": "rimraf -rf ./allure-results package-lock.json yarn.lock",
     "pretest:update": "selenium-standalone start &",
     "pretest:sleep": "sleep 5",
     "test": "wdio wdio.conf.js",
