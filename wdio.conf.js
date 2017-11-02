@@ -51,7 +51,7 @@ exports.config = {
     coloredLogs: true,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './dist',
+    screenshotPath: './allure-results',
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
@@ -103,7 +103,7 @@ exports.config = {
     // see also: http://webdriver.io/guide/testrunner/reporters.html
     reporters: ['dot', 'allure'],
     reporterOptions: {
-        outputDir: './dist',
+        outputDir: './allure-results',
     },
     
     //
