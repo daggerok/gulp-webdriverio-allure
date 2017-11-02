@@ -23,16 +23,14 @@
     "pretest": "npm-run-all pretest:*",
     "pretest:rm": "rimraf -rf ./allure-results",
     "pretest:update": "selenium-standalone start &",
-    "pretest:sleep": "sleep 10",
+    "pretest:sleep": "sleep 5",
     "test": "wdio wdio.conf.js",
-    "prereport": "npm-run-all prereport:*",
-    "prereport:killall": "npm run killall || true",
     "report": "allure serve -p 3000",
     "killjava": "killall java || true",
     "killnode": "killall node || true",
     "kill9000": "kill -9 $(fuser 9000/tcp) || true",
     "killall": "npm run killjava && npm run killnode",
-    "stop": "npm run killall"
+    "stop": "npm run killall || true"
   },
   "repository": {
     "type": "git",
