@@ -1,6 +1,9 @@
 language: node_js
 node_js:
  - 5
+ - 6
+ - 7
+ - 8
 
 install: true
 before_install:
@@ -12,6 +15,7 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 script:
+  - rm -rf node_modules yarn.lock package-lock.json
   - export root=$(pwd)
   - npm i
   - cd $root/node_modules/phantomjs-prebuilt/
