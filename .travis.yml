@@ -4,7 +4,9 @@ node_js:
  - 6
  - 7
  - 8
+ - 9
  - "stable"
+ - "node"
 
 install: true
 before_install:
